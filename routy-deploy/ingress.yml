@@ -13,6 +13,14 @@ spec:
   rules:
   - http:
       paths:
+      # ⭐ 구글 OAuth2 콜백 전용 경로 (반드시 최상단!)
+      - path: /login/oauth2/code/google(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: routy-backend-ser
+            port:
+              number: 8001
       - path: /()(.*)
         pathType: ImplementationSpecific
         backend:
