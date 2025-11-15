@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: routy-backend-container
-        image: bynmch/routy_back:20
+        image: bynmch/routy_back:21
         imagePullPolicy: Always
         ports:
         - containerPort: 7777
